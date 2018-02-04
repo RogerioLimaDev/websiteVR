@@ -1,2 +1,2 @@
 # websiteVR
-my first experimente with a-fram and webvr
+my first experimente with a-frame and webvr
