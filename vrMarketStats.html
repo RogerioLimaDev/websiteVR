@@ -1,97 +1,86 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <title>VR Market</title>
     <meta name="description" content="Hello, WebVR! - A-Frame">
-	<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1">
+    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1">
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
-	<script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
-	 <style>
-		body{
-			font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-			background-color: transparent;
-			}
-		 #FirstDiv{
-			 position: absolute;
-			 text-align: right;
-			 top: 700px;
-			 width: 90%;
-			 z-index: 1;
-		 	}
-		 h3{
-			position: absolute;
-			width: 100%;
-			color: rgba(255,255,255,0.58);
-			margin-top: -7px;
-		 }
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+    <style>
+        body {
+            font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+            background-color: transparent;
+        }
+        
+        #FirstDiv {
+            position: absolute;
+            text-align: right;
+            top: 40px;
+            width: 85%;
+            z-index: 1;
+        }
+        
+        h3 {
+            position: absolute;
+            width: 100%;
+            color: rgba(255, 255, 255, 0.58);
+            margin-top: -7px;
+        }
+    </style>
+</head>
 
-
-	 </style> 
-  </head>
-  <body>
-	  <div  id = "FirstDiv" style="margin-top: 50px;">
-		<h3>Arraste o mouse para navegar no browser ou<br> no mobile visualize em VR usando um &oacute;culos cardboard <br>ou
-		  use qualquer outro HMD.</h3>
-	</div>
+<body>
+    <div id="FirstDiv" style="margin-top: 50px;">
+        <h3>Arraste o mouse para navegar no browser ou<br> no mobile visualize em VR usando um &oacute;culos cardboard <br>ou use qualquer outro HMD.</h3>
+    </div>
     <a-scene>
-		<a-entity id="dust" particle-system="preset: dust; color: #502728; particleCount: 2000 velocityValue: 0 25 0 opacity=.5"></a-entity>
-		
-		<a-entity light="intensity:0.2;castShadow:true" position="-3.5 1.5 -7" data-aframe-default-light="" aframe-injected=""></a-entity>
-		
-		
-		<a-torus id= "torus" position="0 .5 -1"  radius="7" arc="360" rotation="45 0 0" material=" color:#EF2D5E; wireframeLinewidth: 1; wireframe: true; transparent: true; opacity:0.3 metalness:1" > 
-		
-			<a-torus position="0 .5 0"  radius="8" arc="360" rotation="90 0 0" material=" color:#EF662D; wireframeLinewidth: 1; wireframe: true; transparent: true; opacity:0.6 " > 
-			
-						<a-torus position="0 .5 0"  radius="9" arc="360" rotation="45 0 0" material=" color:#6A0CA5; wireframeLinewidth: 1; wireframe: true; transparent: true; opacity:0.6 " > 
-				
-							<a-torus position="0 -0.6 0"  radius="1" arc="360" rotation="90 0 0" material=" color:#0091A6; wireframeLinewidth: 1; wireframe: true; transparent: true; opacity:0.6 " > </a-torus>
-				
-				
-				</a-torus>
-			
-			</a-torus>
-		
-		</a-torus>
-		
-		
-		<a-text font="roboto" value="Base instalada de headsets VR em 2016:" width="4" position="-1 3.5 -4.5"
-		rotation="0 0 0"></a-text>
-		<a-text font="roboto" value="7.000.000" width="9" position="-1 3.2 -4.5"
-		rotation="0 0 0"></a-text>
-		<a-text font="roboto" value="sem incluir os Google Cardboards" width="4" position="-1 2.85 -4.5"
-		rotation="0 0 0"></a-text>
-		
-		<a-text font="roboto" value="Base estimada de headsets VR em 2020:" width="4" position="2.8 2.5 -3.5"
-		rotation="0 -35 0"></a-text>
-		<a-text font="roboto" value="37.000.000" width="9" position="2.8 2.2 -3.5"
-		rotation="0 -35 0"></a-text> 
-		
-		<a-text font="roboto" value="Headset VR mais vendido :" width="4" position="-5 3.5 -3.5"
-		rotation="0 35 0"></a-text>
-		<a-text font="roboto" value="Gear VR Samsung" width="9" position="-5 3.2 -3.5"
-		rotation="0 35 0"></a-text> 
-		<a-text font="roboto" value="4.300.000 unidades em 2016" width="4" position="-5 2.85 -3.5"
-		rotation="0 35 0"></a-text>
-		
-		<a-text font="roboto" value="Headset VR mais popular :" width="4" position="-5 3.5 2"
-		rotation="0 102 0"></a-text>
-		<a-text font="roboto" value="Google Cardboard" width="9" position="-5 3.2 2"
-		rotation="0 102 0"></a-text>
-		<a-text font="roboto" value="Funciona na maioria dos celulares modernos" width="4" position="-5 2.85 2"
-		rotation="0 102 0"></a-text>
-		
-		<a-text font="roboto" value="Porcentagem de dispositivos mobile VR:" width="4" position="5.2 2.5 0.035"
-		rotation="0 -105 0"></a-text>
-		<a-text font="roboto" value="75% do mercado global" width="9" position="5.2 2.2 0.035"
-		rotation="0 -105 0"></a-text> 
-		
+        <a-entity id="dust" particle-system="preset: dust; color: #502728; particleCount: 2000 velocityValue: 0 25 0 opacity=.5"></a-entity>
 
-		<a-sky color="#000000"></a-sky>
-		
+        <a-entity light="intensity:0.2;castShadow:true" position="-3.5 1.5 -7" data-aframe-default-light="" aframe-injected=""></a-entity>
+
+        <a-entity>
+            <a-torus id="torus" position="0 .5 -1" radius="7" arc="360" rotation="45 0 0" material=" color:#EF2D5E; wireframeLinewidth: 1; wireframe: true; transparent: true; opacity:0.3 metalness:1">
+
+                <a-torus position="0 .5 0" radius="8" arc="360" rotation="90 0 0" material=" color:#EF662D; wireframeLinewidth: 1; wireframe: true; transparent: true; opacity:0.6 ">
+
+                    <a-torus position="0 .5 0" radius="9" arc="360" rotation="45 0 0" material=" color:#6A0CA5; wireframeLinewidth: 1; wireframe: true; transparent: true; opacity:0.6 ">
+
+                        <a-torus position="0 -0.6 0" radius="1" arc="360" rotation="90 0 0" material=" color:#0091A6; wireframeLinewidth: 1; wireframe: true; transparent: true; opacity:0.6 "> </a-torus>
+                        <a-animation easing="linear" attribute="rotation" dur="180000" to="0 360 0" repeat="indefinite"></a-animation>
+
+
+                    </a-torus>
+
+                </a-torus>
+
+            </a-torus>
+            <a-animation easing="linear" attribute="rotation" dur="180000" to="0 360 0" repeat="indefinite"></a-animation>
+
+        </a-entity>
+
+        <a-text font="roboto" value="Base instalada de headsets VR em 2016:" width="4" position="-1 3.5 -4.5" rotation="0 0 0"></a-text>
+        <a-text font="roboto" value="7.000.000" width="9" position="-1 3.2 -4.5" rotation="0 0 0"></a-text>
+        <a-text font="roboto" value="sem incluir os Google Cardboards" width="4" position="-1 2.85 -4.5" rotation="0 0 0"></a-text>
+
+        <a-text font="roboto" value="Base estimada de headsets VR em 2020:" width="4" position="2.8 2.5 -3.5" rotation="0 -35 0"></a-text>
+        <a-text font="roboto" value="37.000.000" width="9" position="2.8 2.2 -3.5" rotation="0 -35 0"></a-text>
+
+        <a-text font="roboto" value="Headset VR mais vendido :" width="4" position="-5 3.5 -3.5" rotation="0 35 0"></a-text>
+        <a-text font="roboto" value="Gear VR Samsung" width="9" position="-5 3.2 -3.5" rotation="0 35 0"></a-text>
+        <a-text font="roboto" value="4.300.000 unidades em 2016" width="4" position="-5 2.85 -3.5" rotation="0 35 0"></a-text>
+
+        <a-text font="roboto" value="Headset VR mais popular :" width="4" position="-5 3.5 2" rotation="0 102 0"></a-text>
+        <a-text font="roboto" value="Google Cardboard" width="9" position="-5 3.2 2" rotation="0 102 0"></a-text>
+        <a-text font="roboto" value="Funciona na maioria dos celulares modernos" width="4" position="-5 2.85 2" rotation="0 102 0"></a-text>
+
+        <a-text font="roboto" value="Porcentagem de dispositivos mobile VR:" width="4" position="5.2 2.5 0.035" rotation="0 -105 0"></a-text>
+        <a-text font="roboto" value="75% do mercado global" width="9" position="5.2 2.2 0.035" rotation="0 -105 0"></a-text>
+
+        <a-sky color="#000000"></a-sky>
     </a-scene>
-	
-  </body>
-</html>
 
+</body>
+
+</html>
